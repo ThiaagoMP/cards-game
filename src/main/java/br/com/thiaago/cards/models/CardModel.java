@@ -3,6 +3,7 @@ package br.com.thiaago.cards.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -11,7 +12,7 @@ import java.util.UUID;
 @Table(name = "cards")
 @Getter
 @Setter
-public class CardModel implements Serializable {
+public class CardModel extends RepresentationModel<CardModel> implements Serializable {
 
     private static final long serialVersion = 1L;
 
